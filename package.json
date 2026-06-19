@@ -1,0 +1,11 @@
+{
+  "name": "economics-pro-x",
+  "version": "1.0.0",
+  "description": "Premium Blogger Theme for Economics Education",
+  "private": true,
+  "scripts": {
+    "build": "node build/build-theme.js"
+  },
+  "author": "Akash Chouhan",
+  "license": "MIT"
+}

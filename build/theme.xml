@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+
+<html
+    b:version='2'
+    expr:dir='data:blog.languageDirection'
+    expr:lang='data:blog.locale'
+    xmlns='http://www.w3.org/1999/xhtml'
+    xmlns:b='http://www.google.com/2005/gml/b'
+    xmlns:data='http://www.google.com/2005/gml/data'
+    xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+<head>
+
+<meta charset='UTF-8'/>
+
+<meta content='width=device-width, initial-scale=1'
+      name='viewport'/>
+
+<title><data:blog.pageTitle/></title>
+
+<meta expr:content='data:blog.metaDescription'
+      name='description'/>
+
+<link expr:href='data:blog.canonicalUrl'
+      rel='canonical'/>
+
+<b:include data='blog' name='all-head-content'/>
+
+<b:skin><![CDATA[
+
+
+
+/* ===== variables.css ===== */
+:root{
+
+/* ========= COLORS ========= */
+
+--primary:#0F172A;
+--secondary:#2563EB;
+--success:#16A34A;
+--warning:#F59E0B;
+--danger:#DC2626;
+
+--background:#F8FAFC;
+--surface:#FFFFFF;
+
+--text:#111827;
+--text-light:#6B7280;
+
+--border:#E5E7EB;
+
+
+/* ========= SPACING ========= */
+
+--space-1:4px;
+--space-2:8px;
+--space-3:12px;
+--space-4:16px;
+--space-5:24px;
+--space-6:32px;
+--space-7:48px;
+--space-8:64px;
+
+
+/* ========= RADIUS ========= */
+
+--radius-sm:6px;
+--radius-md:12px;
+--radius-lg:20px;
+--radius-xl:32px;
+
+
+/* ========= SHADOW ========= */
+
+--shadow-sm:0 1px 2px rgba(0,0,0,.05);
+
+--shadow-md:0 6px 12px rgba(0,0,0,.08);
+
+--shadow-lg:0 16px 32px rgba(0,0,0,.12);
+
+
+/* ========= TYPOGRAPHY ========= */
+
+--font-heading:'Poppins',sans-serif;
+
+--font-body:'Inter',sans-serif;
+
+--font-code:'JetBrains Mono',monospace;
+
+
+/* ========= WIDTH ========= */
+
+--container:1280px;
+
+}
+
+/* ===== base.css ===== */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:var(--font-body);
+
+background:var(--background);
+
+color:var(--text);
+
+line-height:1.7;
+
+}
+
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+ul{
+
+list-style:none;
+
+}
+
+.container{
+
+width:min(100% - 32px,var(--container));
+
+margin-inline:auto;
+
+}
+
+/* ===== layout.css ===== */
+/* ======================================================
+   ECONOMICS PRO X
+   Layout System
+====================================================== */
+
+.wrapper{
+    width:min(var(--container), calc(100% - 32px));
+    margin-inline:auto;
+}
+
+.grid{
+    display:grid;
+    gap:24px;
+}
+
+.grid-2{
+    grid-template-columns:2fr 1fr;
+}
+
+.grid-3{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.grid-4{
+    grid-template-columns:repeat(4,1fr);
+}
+
+.section{
+    padding:64px 0;
+}
+
+.card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius-md);
+    padding:24px;
+    box-shadow:var(--shadow-sm);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow-md);
+}
+
+.text-center{
+    text-align:center;
+}
+
+.flex{
+    display:flex;
+}
+
+.flex-between{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.flex-center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.wrapper{
+width:min(1200px,92%);
+margin:auto;
+}
+
+.site-header{
+position:sticky;
+top:0;
+z-index:999;
+background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+.topbar{
+background:#0F172A;
+color:#fff;
+font-size:13px;
+padding:8px 0;
+}
+
+.navbar{
+padding:18px 0;
+}
+
+.navbar-inner{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:30px;
+}
+
+.nav-links{
+display:flex;
+gap:28px;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.nav-links a{
+text-decoration:none;
+font-weight:600;
+color:#111827;
+transition:.25s;
+}
+
+.nav-links a:hover{
+color:#C9A227;
+}
+
+.logo a{
+font-size:30px;
+font-weight:800;
+text-decoration:none;
+color:#111827;
+}
+
+.logo span{
+color:#C9A227;
+}
+
+.header-actions{
+display:flex;
+gap:12px;
+}
+
+.header-actions button{
+border:none;
+background:#f1f5f9;
+padding:10px;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* ===== components.css ===== */
+/* ======================================================
+   HEADER
+====================================================== */
+
+.site-header{
+
+position:sticky;
+
+top:0;
+
+z-index:9999;
+
+background:var(--surface);
+
+border-bottom:1px solid var(--border);
+
+box-shadow:var(--shadow-sm);
+
+}
+
+.topbar{
+
+background:var(--primary);
+
+color:#fff;
+
+padding:10px 0;
+
+font-size:14px;
+
+text-align:center;
+
+}
+
+.navbar{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:18px 0;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:700;
+
+font-family:var(--font-heading);
+
+color:var(--primary);
+
+}
+
+.nav-links{
+
+display:flex;
+
+gap:24px;
+
+align-items:center;
+
+}
+
+.nav-links a{
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+color:var(--secondary);
+
+}
+
+.search-box{
+
+width:300px;
+
+padding:12px 16px;
+
+border:1px solid var(--border);
+
+border-radius:999px;
+
+outline:none;
+
+}
+
+.btn{
+
+padding:12px 20px;
+
+border:none;
+
+border-radius:999px;
+
+background:var(--secondary);
+
+color:#fff;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:#1D4ED8;
+
+}
+/* =====================================================
+HERO
+===================================================== */
+
+.hero{
+
+padding:100px 0;
+
+background:linear-gradient(135deg,#0F172A,#1E3A8A);
+
+color:white;
+
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:54px;
+
+line-height:1.2;
+
+margin-bottom:24px;
+
+max-width:900px;
+
+margin-inline:auto;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+max-width:750px;
+
+margin:0 auto 40px;
+
+opacity:.9;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn.secondary{
+
+background:white;
+
+color:#0F172A;
+
+}
+
+/* ===== responsive.css ===== */
+/* ======================================================
+   Responsive Breakpoints
+====================================================== */
+
+/* Large Tablets */
+
+@media (max-width:1200px){
+
+.grid-4{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* Tablets */
+
+@media (max-width:992px){
+
+.grid-3,
+.grid-2{
+    grid-template-columns:1fr;
+}
+
+}
+
+/* Navigation */
+
+@media (max-width:900px){
+
+.nav-links{
+    display:none;
+}
+
+.logo a{
+    font-size:24px;
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.section{
+    padding:48px 0;
+}
+
+.wrapper{
+    width:calc(100% - 24px);
+}
+
+}
+
+/* Small Mobile */
+
+@media (max-width:480px){
+
+.hero{
+    padding:70px 0;
+}
+
+.hero h1{
+    font-size:36px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.card{
+    padding:18px;
+}
+
+}
+
+]]></b:skin>
+
+</head>
+
+<body>
+
+<div id='app'>
+
+<header id='header'>
+
+<!-- Header -->
+
+</header>
+
+<nav id='navigation'>
+
+<!-- Navigation -->
+
+</nav>
+
+<section id='hero'>
+
+<!-- Hero -->
+
+</section>
+
+<main id='content'>
+
+<b:section
+    id='main'
+    showaddelement='yes'
+    maxwidgets='1'/>
+
+</main>
+
+<aside id='sidebar'>
+
+<b:section
+    id='sidebar'
+    showaddelement='yes'
+    maxwidgets='10'/>
+
+</aside>
+
+<footer id='footer'>
+
+<!-- Footer -->
+
+</footer>
+
+</div>
+
+<b:include data='blog' name='google-analytics'/>
+
+<script><![CDATA[
+
+
+
+/* ===== app.js ===== */
+
+
+/* ===== accordion.js ===== */
+
+
+/* ===== darkmode.js ===== */
+
+
+/* ===== progress.js ===== */
+
+
+/* ===== search.js ===== */
+
+
+/* ===== toc.js ===== */
+
+
+/* ===== main.js ===== */
+
+
+]]></script>
+
+</body>
+
+</html>

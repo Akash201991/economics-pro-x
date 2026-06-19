@@ -2,70 +2,73 @@
    Responsive Breakpoints
 ====================================================== */
 
-@media(max-width:1200px){
+/* Large Tablets */
+
+@media (max-width:1200px){
 
 .grid-4{
-
-grid-template-columns:repeat(2,1fr);
-
+    grid-template-columns:repeat(2,1fr);
 }
 
 }
 
-@media(max-width:992px){
+/* Tablets */
+
+@media (max-width:992px){
 
 .grid-3,
 .grid-2{
-
-grid-template-columns:1fr;
-
+    grid-template-columns:1fr;
 }
 
 }
 
-@media(max-width:768px){
+/* Navigation */
+
+@media (max-width:900px){
+
+.nav-links{
+    display:none;
+}
+
+.logo a{
+    font-size:24px;
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
 
 .section{
-
-padding:48px 0;
-
+    padding:48px 0;
 }
 
 .wrapper{
-
-width:calc(100% - 24px);
-
+    width:calc(100% - 24px);
 }
 
 }
 
-@media(max-width:480px){.hero{
+/* Small Mobile */
 
-padding:70px 0;
+@media (max-width:480px){
 
+.hero{
+    padding:70px 0;
 }
 
 .hero h1{
-
-font-size:36px;
-
+    font-size:36px;
 }
 
 .hero p{
-
-font-size:18px;
-
+    font-size:18px;
 }
 
-.nav-links{
-
-display:none;
-
-}
 .card{
-
-padding:18px;
-
+    padding:18px;
 }
 
 }
