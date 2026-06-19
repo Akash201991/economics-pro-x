@@ -1,0 +1,50 @@
+/* ======================================================
+   Responsive Breakpoints
+====================================================== */
+
+@media(max-width:1200px){
+
+.grid-4{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:992px){
+
+.grid-3,
+.grid-2{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.section{
+
+padding:48px 0;
+
+}
+
+.wrapper{
+
+width:calc(100% - 24px);
+
+}
+
+}
+
+@media(max-width:480px){
+
+.card{
+
+padding:18px;
+
+}
+
+}
