@@ -51,29 +51,152 @@ margin-top:40px;
 
 </head>
 
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html
+    b:version='2'
+    expr:dir='data:blog.languageDirection'
+    expr:lang='data:blog.locale'
+    xmlns='http://www.w3.org/1999/xhtml'
+    xmlns:b='http://www.google.com/2005/gml/b'
+    xmlns:data='http://www.google.com/2005/gml/data'
+    xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+<head>
+
+<title><data:blog.pageTitle/></title>
+
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+
+<b:skin><![CDATA[
+
+body{
+margin:0;
+padding:0;
+font-family:Arial,sans-serif;
+background:#f8fafc;
+color:#111827;
+}
+
+header{
+background:#0F172A;
+color:#fff;
+padding:20px;
+text-align:center;
+}
+
+main{
+max-width:1200px;
+margin:auto;
+padding:30px;
+}
+
+footer{
+background:#0F172A;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+]]></b:skin>
+
+</head>
+
 <body>
 
-<header>
+<div class='site-header'>
 
-<h1>Economics Pro X</h1>
+<div class='topbar'>
+India's Premium Economics Learning Platform | CBSE • CUET • UGC NET
+</div>
 
-<p>Premium Blogger Theme for Economics Education</p>
+<div class='wrapper'>
 
-</header>
+<div class='navbar'>
 
-<main>
+<div class='logo'>
+Economics Pro X
+</div>
 
-<h2>Theme Successfully Installed</h2>
+<div class='nav-links'>
+
+<a expr:href='data:blog.homepageUrl'>Home</a>
+
+<a href='/search/label/Class%2012'>
+Class 12
+</a>
+
+<a href='/search/label/Class%2011'>
+Class 11
+</a>
+
+<a href='/search/label/UGC%20NET'>
+UGC NET
+</a>
+
+<a href='/search/label/CUET'>
+CUET
+</a>
+
+<a href='/search/label/PYQ'>
+PYQs
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<section class='hero section'>
+
+<div class='wrapper'>
+
+<h1>
+
+Master Economics with Conceptual Learning
+
+</h1>
 
 <p>
-Welcome to Economics Pro X.
+
+CBSE Notes • NCERT Solutions • Numericals • Previous Year Questions • UGC NET • CUET
+
 </p>
+
+<div class='hero-buttons'>
+
+<a class='btn' href='/search/label/Class%2012'>
+Explore Class 12
+</a>
+
+<a class='btn secondary' href='/search/label/UGC%20NET'>
+UGC NET Notes
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<main class='wrapper'>
+
+<b:section id='main' showaddelement='yes'/>
 
 </main>
 
 <footer>
 
+<div class='wrapper'>
+
 © 2026 Economics Pro X
+
+</div>
 
 </footer>
 

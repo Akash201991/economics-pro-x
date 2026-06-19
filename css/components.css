@@ -1,0 +1,180 @@
+/* ======================================================
+   HEADER
+====================================================== */
+
+.site-header{
+
+position:sticky;
+
+top:0;
+
+z-index:9999;
+
+background:var(--surface);
+
+border-bottom:1px solid var(--border);
+
+box-shadow:var(--shadow-sm);
+
+}
+
+.topbar{
+
+background:var(--primary);
+
+color:#fff;
+
+padding:10px 0;
+
+font-size:14px;
+
+text-align:center;
+
+}
+
+.navbar{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:18px 0;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:700;
+
+font-family:var(--font-heading);
+
+color:var(--primary);
+
+}
+
+.nav-links{
+
+display:flex;
+
+gap:24px;
+
+align-items:center;
+
+}
+
+.nav-links a{
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+color:var(--secondary);
+
+}
+
+.search-box{
+
+width:300px;
+
+padding:12px 16px;
+
+border:1px solid var(--border);
+
+border-radius:999px;
+
+outline:none;
+
+}
+
+.btn{
+
+padding:12px 20px;
+
+border:none;
+
+border-radius:999px;
+
+background:var(--secondary);
+
+color:#fff;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:#1D4ED8;
+
+}
+/* =====================================================
+HERO
+===================================================== */
+
+.hero{
+
+padding:100px 0;
+
+background:linear-gradient(135deg,#0F172A,#1E3A8A);
+
+color:white;
+
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:54px;
+
+line-height:1.2;
+
+margin-bottom:24px;
+
+max-width:900px;
+
+margin-inline:auto;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+max-width:750px;
+
+margin:0 auto 40px;
+
+opacity:.9;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn.secondary{
+
+background:white;
+
+color:#0F172A;
+
+}
